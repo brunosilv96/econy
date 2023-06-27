@@ -1,31 +1,42 @@
 import styles from "./Navbar.module.css";
-import { Navbar as Bnavbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Navbar() {
 	return (
-		<Bnavbar expand="md" sticky="top" className="bg-body-tertiary">
-			<Container>
-				<Bnavbar.Brand>
-					<Link to="/">Econy</Link>
-				</Bnavbar.Brand>
-				<Bnavbar.Toggle aria-controls="basic-navbar-nav" />
-				<Bnavbar.Collapse id="basic-navbar-nav">
-					<Nav className="me-auto">
-						<Link to="/">
-							<Nav.Link>Home</Nav.Link>
-						</Link>
-						<Nav.Link>Link</Nav.Link>
-					</Nav>
-					<Nav>
-						<NavDropdown title="Perfil" id="navbarScrollingDropdown">
-							<NavDropdown.Item>Sua PágIna</NavDropdown.Item>
-							<NavDropdown.Item>Pedidos</NavDropdown.Item>
-						</NavDropdown>
-					</Nav>
-				</Bnavbar.Collapse>
-			</Container>
-		</Bnavbar>
+		<header>
+			<nav className="container-fluid" id={styles.nav_conainter}>
+				<div className="row justify-content-around">
+					<div className="col-sm-3">
+						<p>Econy</p>
+					</div>
+					<div className="col-sm-6">
+						<form className="d-flex">
+							<input type="search" placeholder="Pesquisar" className="form-control" />
+						</form>
+					</div>
+					<div className="col-sm-3" id={styles.nav_button}>
+						<Dropdown>
+							<Dropdown.Toggle id="dropdown-basic">Usuário</Dropdown.Toggle>
+							<Dropdown.Menu>
+								<Dropdown.Item>Perfil</Dropdown.Item>
+								<Dropdown.Item>Pedidos</Dropdown.Item>
+							</Dropdown.Menu>
+						</Dropdown>
+					</div>
+				</div>
+			</nav>
+			<div className="nav justify-content-evenly" id={styles.subnav_container}>
+				<Link className="nav-link">Categoria 1</Link>
+				<Link className="nav-link">Categoria 1</Link>
+				<Link className="nav-link">Categoria 1</Link>
+				<Link className="nav-link">Categoria 1</Link>
+				<Link className="nav-link">Categoria 1</Link>
+				<Link className="nav-link">Categoria 1</Link>
+				<Link className="nav-link">Categoria 1</Link>
+				<Link className="nav-link">Categoria 1</Link>
+			</div>
+		</header>
 	);
 }
 
