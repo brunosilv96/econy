@@ -2,6 +2,10 @@ header {
 	background-color: #ffaa00;
 }
 
+#subnav {
+	height: auto;
+}
+
 #subnav a,
 #btnUser a {
 	color: #181818;
@@ -25,4 +29,8 @@ header {
 
 #formNav input::placeholder {
 	color: #181818;
+}
+
+#children_container {
+	background-color: #eeeeee;
 }

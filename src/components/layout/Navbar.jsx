@@ -1,10 +1,10 @@
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ children }) {
 	return (
 		<header>
-			<nav className="navbar sticky-top navbar-expand-sm bg-body-tertiary">
+			<nav className="navbar navbar-expand-sm bg-body-tertiary">
 				<div className="container-fluid">
 					<Link to="/" className="navbar-brand">
 						<img
@@ -32,7 +32,12 @@ function Navbar() {
 								<span class="input-group-text" id="addon-wrapping">
 									<i className="bi bi-search"></i>
 								</span>
-								<input className="form-control" type="search" placeholder="Pesquisar" aria-label="Search" />
+								<input
+									className="form-control"
+									type="search"
+									placeholder="Pesquisar"
+									aria-label="Search"
+								/>
 							</div>
 						</div>
 						<div className="row justify-content-between mt-2 mt-sm-0" id={styles.marketIcons}>
@@ -44,7 +49,11 @@ function Navbar() {
 							</Link>
 						</div>
 						<li className="navbar-nav dropdown" id={styles.btnUser}>
-							<a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<a
+								className="nav-link dropdown-toggle"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false">
 								Nome do Usuário
 							</a>
 							<ul className="dropdown-menu">
@@ -55,6 +64,16 @@ function Navbar() {
 								</li>
 								<li>
 									<hr className="dropdown-divider" />
+								</li>
+								<li>
+									<Link to="/login" className="dropdown-item">
+										Login
+									</Link>
+								</li>
+								<li>
+									<Link to="/register" className="dropdown-item">
+										Cadastrar-se
+									</Link>
 								</li>
 								<li>
 									<Link to="/perfil" className="dropdown-item">
