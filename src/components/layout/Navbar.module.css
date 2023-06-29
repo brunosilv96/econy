@@ -1,28 +1,28 @@
-#nav_conainter {
-	padding-top: 10px;
-	background-color: #cb9046;
-	text-align: center;
+header {
+	background-color: #ffaa00;
 }
 
-@media (max-width: 576px) {
-	#nav_button {
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
+#subnav a,
+#btnUser a {
+	color: #181818;
 }
 
-#nav_conainter p {
-	font-size: 1.5em;
-	font-weight: bold;
+#subnav a:hover {
+	color: #eeeeee;
 }
 
-#subnav_container {
-	border-bottom: 1px solid black;
+#marketIcons i {
+	font-size: 1.3em;
 }
 
-#subnav_container a {
-	color: #000;
-	padding: 0.5em 0.8em;
-	cursor: pointer;
-	text-decoration: none;
+#formNav input {
+	box-shadow: none;
+}
+
+#formNav input:focus {
+	border: 1px solid #ffaa00;
+}
+
+#formNav input::placeholder {
+	color: #181818;
 }
