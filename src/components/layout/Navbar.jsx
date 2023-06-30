@@ -1,21 +1,16 @@
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/img/logo.jpg";
 
-function Navbar({ children }) {
+function Navbar() {
 	return (
 		<header>
-			<nav className="navbar navbar-expand-sm bg-body-tertiary">
+			<nav className="navbar navbar-expand-md bg-body-tertiary">
 				<div className="container-fluid">
-					<Link to="/" className="navbar-brand">
-						<img
-							src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
-							alt="Econy"
-							width="30"
-							height="24"
-							className="me-2"
-						/>
-						Econy
+					<Link to="/" className="navbar-brand" id={styles.navbar_logo}>
+						<img src={logo} alt="logo" />
 					</Link>
+					<h2>Papéis de Fran</h2>
 					<button
 						className="navbar-toggler"
 						type="button"

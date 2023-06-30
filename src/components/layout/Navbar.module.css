@@ -1,5 +1,15 @@
 header {
-	background-color: #ffaa00;
+	background-color: #fca7be;
+}
+
+#navbar_logo img {
+	height: 50px;
+	margin-right: 0.1em;
+}
+
+h2 {
+	color: #181818;
+	font-size: 1.6rem;
 }
 
 #subnav {
@@ -24,7 +34,7 @@ header {
 }
 
 #formNav input:focus {
-	border: 1px solid #ffaa00;
+	border: 2px solid #fca7be;
 }
 
 #formNav input::placeholder {

@@ -10,15 +10,14 @@
 }
 
 #login_container button {
-	background-color: #181818;
-	border: 2px solid #ffaa00;
-	color: #ffaa00;
-	align-items: center;
+	background-color: #fca7be;
+	border: 2px solid #181818;
+	color: #181818;
 	width: 100%;
 }
 
 #login_container button:hover {
-	background-color: #ffaa00;
+	background-color: #fedbd9;
 	border: 2px solid #181818;
 	color: #181818;
 }

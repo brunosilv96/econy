@@ -6,9 +6,9 @@ function Login() {
 	function handleChange() {}
 	function handleSubmit() {}
 	return (
-		<section className="container mt-3">
+		<section className="container-sm mt-3">
 			<div className="row justify-content-center">
-				<div className="col-sm-6" id={styles.login_container}>
+				<div className="col-sm-10 col-lg-7" id={styles.login_container}>
 					<h1 className="mb-3">Login</h1>
 					<form onSubmit={handleSubmit}>
 						<Input
