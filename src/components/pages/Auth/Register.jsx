@@ -1,13 +1,14 @@
 import Input from "../../form/Input";
 import styles from "./Register.module.css";
+import Button from "../../form/Button";
 
 function Register() {
 	function handleChange() {}
 	function handleSubmit() {}
 	return (
-		<section className="container mt-3">
+		<section className="container-lg mt-3">
 			<div className="row justify-content-center">
-				<div className="col-md-8" id={styles.login_container}>
+				<div className="col-lg-8" id={styles.login_container}>
 					<h1 className="mb-3">Cadastre-se</h1>
 					<form onSubmit={handleSubmit} className="row">
 						<h3>Informe os seus dados:</h3>
@@ -22,7 +23,7 @@ function Register() {
 							type="text"
 							text="CPF"
 							name="cpf"
-							classis="col-md-6"
+							classis="col-lg-6"
 							handleOnChange={handleChange}
 							placeholder="Informe o seu CPF"
 						/>
@@ -30,7 +31,7 @@ function Register() {
 							type="tel"
 							text="Telefone"
 							name="phone"
-							classis="col-md-6"
+							classis="col-lg-6"
 							handleOnChange={handleChange}
 							placeholder="Informe o seu telefone"
 						/>
@@ -45,7 +46,7 @@ function Register() {
 							type="password"
 							text="Senha"
 							name="password"
-							classis="col-md-6"
+							classis="col-lg-6"
 							handleOnChange={handleChange}
 							placeholder="Informe a sua senha"
 						/>
@@ -53,7 +54,7 @@ function Register() {
 							type="password"
 							text="Confirmação"
 							name="confPassword"
-							classis="col-md-6"
+							classis="col-lg-6"
 							handleOnChange={handleChange}
 							placeholder="Confirme a senha"
 						/>
@@ -62,7 +63,7 @@ function Register() {
 							type="text"
 							text="CEP"
 							name="passcode"
-							classis="col-md-4"
+							classis="col-lg-4"
 							handleOnChange={handleChange}
 							placeholder="Informe o CEP"
 						/>
@@ -70,7 +71,7 @@ function Register() {
 							type="text"
 							text="Endereço"
 							name="adress"
-							classis="col-md-10"
+							classis="col-lg-10"
 							handleOnChange={handleChange}
 							placeholder="Informe o seu endereço"
 						/>
@@ -78,7 +79,7 @@ function Register() {
 							type="text"
 							text="Nº"
 							name="number"
-							classis="col-md-2"
+							classis="col-lg-2"
 							handleOnChange={handleChange}
 							placeholder="Número"
 						/>
@@ -93,7 +94,7 @@ function Register() {
 							type="text"
 							text="Bairro"
 							name="neighborhood"
-							classis="col-md-5"
+							classis="col-lg-5"
 							handleOnChange={handleChange}
 							placeholder="Informe o seu bairro"
 						/>
@@ -101,7 +102,7 @@ function Register() {
 							type="text"
 							text="Cidade"
 							name="city"
-							classis="col-md-5"
+							classis="col-lg-5"
 							handleOnChange={handleChange}
 							placeholder="Informe a sua cidade"
 						/>
@@ -109,13 +110,11 @@ function Register() {
 							type="text"
 							text="Estado"
 							name="state"
-							classis="col-md-2"
+							classis="col-lg-2"
 							handleOnChange={handleChange}
 							placeholder="UF"
 						/>
-						<button className="btn btn-primary" type="submit">
-							Cadastrar
-						</button>
+						<Button text="Cadastrar" type="submit" />
 					</form>
 				</div>
 			</div>

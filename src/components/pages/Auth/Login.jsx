@@ -1,16 +1,17 @@
 import Input from "../../form/Input";
 import styles from "./Login.module.css";
+import Button from "../../form/Button";
 import { Link } from "react-router-dom";
 
 function Login() {
 	function handleChange() {}
 	function handleSubmit() {}
 	return (
-		<section className="container-sm mt-3">
+		<section className="container-lg mt-3">
 			<div className="row justify-content-center">
 				<div className="col-sm-10 col-lg-7" id={styles.login_container}>
 					<h1 className="mb-3">Login</h1>
-					<form onSubmit={handleSubmit}>
+					<form onSubmit={handleSubmit} className="row">
 						<Input
 							type="email"
 							text="E-mail"
@@ -25,9 +26,7 @@ function Login() {
 							placeholder="Informe a sua senha"
 							handleOnChange={handleChange}
 						/>
-						<button className="btn btn-primary al-center" type="submit">
-							Entrar
-						</button>
+						<Button text="Entrar" type="submit" />
 						<div id={styles.register_container}>
 							<p>Ainda não é cadastrado?</p>
 							<p>

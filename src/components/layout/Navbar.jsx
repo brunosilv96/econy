@@ -5,12 +5,12 @@ import logo from "../../assets/img/logo.jpg";
 function Navbar() {
 	return (
 		<header>
-			<nav className="navbar navbar-expand-md bg-body-tertiary">
+			<nav className="navbar navbar-expand-lg bg-body-tertiary">
 				<div className="container-fluid">
 					<Link to="/" className="navbar-brand" id={styles.navbar_logo}>
 						<img src={logo} alt="logo" />
 					</Link>
-					<h2>Papéis de Fran</h2>
+					<span className="fs-5">Papéis da Fran</span>
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -22,7 +22,7 @@ function Navbar() {
 						<span className="navbar-toggler-icon"></span>
 					</button>
 					<div className="collapse navbar-collapse justify-content-evenly col-9" id="navbarSupportedContent">
-						<div className="col-12 col-sm-5 mt-2 mt-sm-0" id={styles.formNav}>
+						<div className="col-12 col-lg-5 mt-2 mt-lg-0" id={styles.formNav}>
 							<div className="input-group flex-nowrap">
 								<span class="input-group-text" id="addon-wrapping">
 									<i className="bi bi-search"></i>
@@ -35,7 +35,7 @@ function Navbar() {
 								/>
 							</div>
 						</div>
-						<div className="row justify-content-between mt-2 mt-sm-0" id={styles.marketIcons}>
+						<div className="row justify-content-between mt-2 mt-lg-0" id={styles.marketIcons}>
 							<Link to="/carlist" className="btn col">
 								<i className="bi bi-cart3"></i>
 							</Link>
@@ -71,7 +71,7 @@ function Navbar() {
 									</Link>
 								</li>
 								<li>
-									<Link to="/perfil" className="dropdown-item">
+									<Link to="/profile" className="dropdown-item">
 										Perfil
 									</Link>
 								</li>
@@ -85,26 +85,6 @@ function Navbar() {
 					</div>
 				</div>
 			</nav>
-			<ul className="nav justify-content-center" id={styles.subnav}>
-				<li className="nav-item">
-					<a className="nav-link" aria-current="page" href="#">
-						Categoria 1
-					</a>
-				</li>
-				<li className="nav-item">
-					<a className="nav-link" href="#">
-						Categoria 2
-					</a>
-				</li>
-				<li className="nav-item">
-					<a className="nav-link" href="#">
-						Categoria 3
-					</a>
-				</li>
-				<li className="nav-item">
-					<a className="nav-link">Categoria 4</a>
-				</li>
-			</ul>
 		</header>
 	);
 }

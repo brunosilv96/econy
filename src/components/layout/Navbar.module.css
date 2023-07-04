@@ -12,19 +12,6 @@ h2 {
 	font-size: 1.6rem;
 }
 
-#subnav {
-	height: auto;
-}
-
-#subnav a,
-#btnUser a {
-	color: #181818;
-}
-
-#subnav a:hover {
-	color: #eeeeee;
-}
-
 #marketIcons i {
 	font-size: 1.3em;
 }
@@ -39,8 +26,4 @@ h2 {
 
 #formNav input::placeholder {
 	color: #181818;
-}
-
-#children_container {
-	background-color: #eeeeee;
 }

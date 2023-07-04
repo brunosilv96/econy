@@ -1,0 +1,12 @@
+#subnav {
+	height: auto;
+	background-color: #fca7be;
+}
+
+#subnav a {
+	color: #181818;
+}
+
+#subnav a:hover {
+	color: #eeeeee;
+}
