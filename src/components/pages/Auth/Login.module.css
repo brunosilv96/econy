@@ -17,22 +17,3 @@
 #login_container #register_container p {
 	margin: 0;
 }
-
-#login_container button {
-	background-color: #fca7be;
-	border: 2px solid #181818;
-	color: #181818;
-	width: 100%;
-}
-
-#login_container button:hover {
-	background-color: #fedbd9;
-	border: 2px solid #181818;
-	color: #181818;
-}
-
-@media (min-width: 768px) {
-	#login_container button {
-		width: 30%;
-	}
-}

@@ -1,6 +1,7 @@
 #subnav {
 	height: auto;
 	background-color: #fca7be;
+	border-bottom: 1px solid #181818;
 }
 
 #subnav a {

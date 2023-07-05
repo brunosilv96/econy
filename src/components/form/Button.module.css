@@ -1,13 +1,12 @@
 #btn {
 	background-color: #fca7be;
-	border: 2px solid #181818;
+	border: 1px solid #181818;
 	color: #181818;
 	width: 100%;
 }
 
 #btn:hover {
 	background-color: #fedbd9;
-	border: 2px solid #181818;
 	color: #181818;
 }
 
