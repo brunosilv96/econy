@@ -1,10 +1,29 @@
 import Input from "../../form/Input";
 import styles from "./Register.module.css";
 import Button from "../../form/Button";
+import { useState } from "react";
 
 function Register() {
-	function handleChange() {}
+	const [user, setUser] = useState({});
+
+	function handleChange(e) {
+		setUser({ ...user, [e.target.name]: e.target.value });
+	}
 	function handleSubmit() {}
+
+	// Mascaras de input
+	function maskCpf(cpf) {
+		cpf = cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+		return cpf;
+	}
+	function maskPhone(phone) {
+		phone = phone.replace(/^(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+		return phone;
+	}
+	function maskCep(cep) {
+		cep = cep.replace(/^(\d{5})(\d{3})/, "$1-$2");
+		return cep;
+	}
 	return (
 		<section className="container-lg mt-3">
 			<div className="row justify-content-center">
@@ -23,6 +42,8 @@ function Register() {
 							type="text"
 							text="CPF"
 							name="cpf"
+							value={user.cpf ? maskCpf(user.cpf) : ""}
+							maxLength="14"
 							classis="col-lg-6"
 							handleOnChange={handleChange}
 							placeholder="Informe o seu CPF"
@@ -31,6 +52,8 @@ function Register() {
 							type="tel"
 							text="Telefone"
 							name="phone"
+							value={user.phone ? maskPhone(user.phone) : ""}
+							maxLength="15"
 							classis="col-lg-6"
 							handleOnChange={handleChange}
 							placeholder="Informe o seu telefone"
@@ -63,6 +86,8 @@ function Register() {
 							type="text"
 							text="CEP"
 							name="passcode"
+							value={user.passcode ? maskCep(user.passcode) : ""}
+							maxLength="9"
 							classis="col-lg-4"
 							handleOnChange={handleChange}
 							placeholder="Informe o CEP"
@@ -111,6 +136,7 @@ function Register() {
 							text="Estado"
 							name="state"
 							classis="col-lg-2"
+							maxLength="2"
 							handleOnChange={handleChange}
 							placeholder="UF"
 						/>

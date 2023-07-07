@@ -24,7 +24,7 @@ function Navbar() {
 					<div className="collapse navbar-collapse justify-content-evenly col-9" id="navbarSupportedContent">
 						<div className="col-12 col-lg-5 mt-2 mt-lg-0" id={styles.formNav}>
 							<div className="input-group flex-nowrap">
-								<span class="input-group-text" id="addon-wrapping">
+								<span className="input-group-text" id="addon-wrapping">
 									<i className="bi bi-search"></i>
 								</span>
 								<input
