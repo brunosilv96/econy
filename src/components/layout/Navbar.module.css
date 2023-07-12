@@ -3,7 +3,7 @@ header {
 }
 
 #navbar_logo img {
-	height: 50px;
+	height: 70px;
 	margin-right: 0.1em;
 }
 
@@ -13,7 +13,11 @@ h2 {
 }
 
 #marketIcons i {
-	font-size: 1.3em;
+	font-size: 1.5em;
+}
+
+#marketIcons i:hover {
+	color: #181818;
 }
 
 #formNav input {

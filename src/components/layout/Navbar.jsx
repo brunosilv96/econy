@@ -1,18 +1,20 @@
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.jpg";
+import CategoryBar from "../layout/CategoryBar";
 
 function Navbar() {
 	return (
 		<header>
 			<nav className="navbar navbar-expand-lg bg-body-tertiary">
-				<div className="container-fluid">
-					<Link to="/" className="navbar-brand" id={styles.navbar_logo}>
-						<img src={logo} alt="logo" />
-					</Link>
-					<span className="fs-5">Papéis da Fran</span>
+				<div className="container-fluid row justify-content-end">
+					<div className="col-10 col-lg-2 text-center">
+						<Link to="/" className="navbar-brand" id={styles.navbar_logo}>
+							<img src={logo} alt="logo" />
+						</Link>
+					</div>
 					<button
-						className="navbar-toggler"
+						className="navbar-toggler mt-2 mt-lg-0 col-2"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#navbarSupportedContent"
@@ -21,8 +23,10 @@ function Navbar() {
 						aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span>
 					</button>
-					<div className="collapse navbar-collapse justify-content-evenly col-9" id="navbarSupportedContent">
-						<div className="col-12 col-lg-5 mt-2 mt-lg-0" id={styles.formNav}>
+					<div
+						className="collapse navbar-collapse justify-content-evenly col-12 col-lg-10"
+						id="navbarSupportedContent">
+						<div className="col-12 col-lg-7 mt-3 mt-lg-0" id={styles.formNav}>
 							<div className="input-group flex-nowrap">
 								<span className="input-group-text" id="addon-wrapping">
 									<i className="bi bi-search"></i>
@@ -35,15 +39,17 @@ function Navbar() {
 								/>
 							</div>
 						</div>
-						<div className="row justify-content-between mt-2 mt-lg-0" id={styles.marketIcons}>
-							<Link to="/carlist" className="btn col">
-								<i className="bi bi-cart3"></i>
-							</Link>
-							<Link to="/favorits" className="btn col">
-								<i className="bi bi-heart"></i>
-							</Link>
+						<div className="col-lg-3 mt-2 mt-lg-0">
+							<div className="row justify-content-evenly" id={styles.marketIcons}>
+								<Link to="/carlist" className="btn col-1 me-lg-3">
+									<i className="bi bi-cart3"></i>
+								</Link>
+								<Link to="/favorits" className="btn col-1">
+									<i className="bi bi-heart"></i>
+								</Link>
+							</div>
 						</div>
-						<li className="navbar-nav dropdown" id={styles.btnUser}>
+						<li className="col-lg-2 navbar-nav dropdown text-center" id={styles.btnUser}>
 							<a
 								className="nav-link dropdown-toggle"
 								role="button"
@@ -84,6 +90,9 @@ function Navbar() {
 						</li>
 					</div>
 				</div>
+			</nav>
+			<nav>
+				<CategoryBar />
 			</nav>
 		</header>
 	);
