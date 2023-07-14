@@ -8,6 +8,7 @@ import NewProduct from "./components/pages/Product/NewProduct";
 import EditProduct from "./components/pages/Product/EditProduct";
 import NewCategory from "./components/pages/Product/NewCategory";
 import EditCategory from "./components/pages/Product/EditCategory";
+import Product from "./components/pages/Product/Product";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -24,6 +25,7 @@ function App() {
 				<Navbar />
 				<Container>
 					<Routes>
+						<Route path="/product/:id" element={<Product />} />
 						<Route path="/editcategory/:id" element={<EditCategory />} />
 						<Route path="/newcategory" element={<NewCategory />} />
 						<Route path="/editproduct/:id" element={<EditProduct />} />
