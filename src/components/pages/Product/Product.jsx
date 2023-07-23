@@ -15,20 +15,22 @@ function Product() {
 							</div>
 						</div>
 						<div className="col-lg-2 mb-2 mb-lg-0">
-							<div className="row justify-content-lg-center justify-content-around" id={styles.box_img}>
-								<div className="col-3 col-lg-10 p-1 mb-1">
+							<div
+								className="row justify-content-center flex-lg-column align-items-center"
+								id={styles.box_img}>
+								<div className="col-2 col-lg-10 p-1 mb-1 me-2 me-lg-0">
 									<img src="https://via.placeholder.com/300" alt="Descrição imagem" />
 								</div>
-								<div className="col-3 col-lg-10 p-1 mb-1">
+								<div className="col-2 col-lg-10 p-1 mb-1 me-2 me-lg-0">
 									<img src="https://via.placeholder.com/300" alt="Descrição imagem" />
 								</div>
-								<div className="col-3 col-lg-10 p-1 mb-1">
+								<div className="col-2 col-lg-10 p-1 mb-1 me-2 me-lg-0">
 									<img src="https://via.placeholder.com/300" alt="Descrição imagem" />
 								</div>
-								<div className="col-3 col-lg-10 p-1 mb-1">
+								<div className="col-2 col-lg-10 p-1 mb-1 me-2 me-lg-0">
 									<img src="https://via.placeholder.com/300" alt="Descrição imagem" />
 								</div>
-								<div className="col-3 col-lg-10 p-1 mb-1">
+								<div className="col-2 col-lg-10 p-1 mb-1 me-2 me-lg-0">
 									<img src="https://via.placeholder.com/300" alt="Descrição imagem" />
 								</div>
 							</div>

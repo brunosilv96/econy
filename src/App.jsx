@@ -4,10 +4,8 @@ import { UserProvider } from "./context/UserContext";
 // pages
 import Home from "./components/pages/Home";
 import Profile from "./components/pages/User/Profile";
-import NewProduct from "./components/pages/Product/NewProduct";
-import EditProduct from "./components/pages/Product/EditProduct";
-import NewCategory from "./components/pages/Product/NewCategory";
-import EditCategory from "./components/pages/Product/EditCategory";
+import CrudProduct from "./components/pages/Product/CrudProduct";
+import CrudCategory from "./components/pages/Product/CrudCategory";
 import Product from "./components/pages/Product/Product";
 
 import Navbar from "./components/layout/Navbar";
@@ -26,10 +24,8 @@ function App() {
 				<Container>
 					<Routes>
 						<Route path="/product/:id" element={<Product />} />
-						<Route path="/editcategory/:id" element={<EditCategory />} />
-						<Route path="/newcategory" element={<NewCategory />} />
-						<Route path="/editproduct/:id" element={<EditProduct />} />
-						<Route path="/newproduct" element={<NewProduct />} />
+						<Route path="/category/:id" element={<CrudCategory />} />
+						<Route path="/crudproduct/:id" element={<CrudProduct />} />
 						<Route path="/profile" element={<Profile />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/login" element={<Login />} />

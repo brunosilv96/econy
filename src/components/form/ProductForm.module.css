@@ -1,0 +1,7 @@
+#preview_img_box {
+	height: 15vh;
+}
+
+#preview_img_box img {
+	height: 100%;
+}
