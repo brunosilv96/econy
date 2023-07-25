@@ -26,7 +26,7 @@ function Navbar() {
 					<div
 						className="collapse navbar-collapse justify-content-evenly col-12 col-lg-10"
 						id="navbarSupportedContent">
-						<div className="col-12 col-lg-7 mt-3 mt-lg-0" id={styles.formNav}>
+						<div className="col-12 col-lg-8 mt-3 mt-lg-0" id={styles.formNav}>
 							<div className="input-group flex-nowrap">
 								<span className="input-group-text" id="addon-wrapping">
 									<i className="bi bi-search"></i>
@@ -39,16 +39,7 @@ function Navbar() {
 								/>
 							</div>
 						</div>
-						<div className="col-lg-3 mt-2 mt-lg-0">
-							<div className="row justify-content-evenly" id={styles.marketIcons}>
-								<Link to="/carlist" className="btn col-1 me-lg-3">
-									<i className="bi bi-cart3"></i>
-								</Link>
-								<Link to="/favorits" className="btn col-1">
-									<i className="bi bi-heart"></i>
-								</Link>
-							</div>
-						</div>
+						<div className="col-lg-2 mt-2 mt-lg-0"></div>
 						<li className="col-lg-2 navbar-nav dropdown text-center" id={styles.btnUser}>
 							<a
 								className="nav-link dropdown-toggle"

@@ -11,3 +11,32 @@
 #subnav a:hover {
 	color: #eeeeee;
 }
+
+#box_icons {
+	position: fixed;
+	width: 15%;
+	right: 1%;
+	bottom: 1%;
+}
+
+#box_icons button {
+	background-color: #fca7be;
+	border: 1px solid #181818;
+}
+
+#box_icons button i {
+	font-size: 2em;
+	color: #181818;
+}
+
+#box_icons button:hover {
+	background-color: #fedbd9;
+}
+
+@media (min-width: 800px) {
+	#box_icons {
+		width: 6%;
+		right: 1%;
+		top: 15%;
+	}
+}

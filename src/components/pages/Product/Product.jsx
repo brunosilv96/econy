@@ -7,7 +7,7 @@ function Product() {
 				<h1>Produto X</h1>
 			</div>
 			<div className="row">
-				<div className="col-12 col-lg-8">
+				<div className="col-12 col-lg-7">
 					<div className="row gx-lg-3">
 						<div className="col-12 col-lg-10 order-lg-1 mb-1">
 							<div id={styles.img_container}>
@@ -37,10 +37,10 @@ function Product() {
 						</div>
 					</div>
 				</div>
-				<div className="col-12 col-lg-4" id={styles.product_values}>
+				<div className="col-12 col-lg-5" id={styles.product_values}>
 					<div className="row">
 						<div className="col-12 d-none d-lg-block">
-							<h2>Produto X</h2>
+							<h1>Produto X</h1>
 						</div>
 						<div className="row" id={styles.values_box}>
 							<div className="col-12">
@@ -65,7 +65,7 @@ function Product() {
 							</p>
 						</div>
 						<div className="row mt-3 justify-content-center">
-							<div className="col-lg-10 d-grid gap-1">
+							<div className="col-sm-7 col-lg-7 d-grid gap-1">
 								<button className="btn" id={styles.btn}>
 									Comprar
 								</button>
