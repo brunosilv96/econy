@@ -33,10 +33,11 @@ export default function useAuth() {
 			const data = await api.post("users/register", user).then((response) => {
 				return response.data;
 			});
-
+			console.log(data);
 			// Chama a função local de autenticação do usuário
 			await authUser(data);
 		} catch (error) {
+			console.log(error);
 			msgText = error.response.data.message;
 			msgType = "error";
 		}

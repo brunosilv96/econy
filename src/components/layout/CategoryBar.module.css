@@ -14,7 +14,6 @@
 
 #box_icons {
 	position: fixed;
-	width: 15%;
 	right: 1%;
 	bottom: 1%;
 }
@@ -35,8 +34,7 @@
 
 @media (min-width: 800px) {
 	#box_icons {
-		width: 6%;
 		right: 1%;
-		top: 15%;
+		top: 30%;
 	}
 }
