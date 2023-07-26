@@ -4,18 +4,13 @@ import { useState } from "react";
 
 function UserForm({ handleSubmit, userData, btnText }) {
 	const [user, setUser] = useState(userData || {});
-	const [adress, setAdress] = useState(userData.adress || {});
 
 	function handleChange(e) {
 		setUser({ ...user, [e.target.name]: e.target.value });
 	}
-	function handleChangeAdress(e) {
-		setAdress({ ...adress, [e.target.name]: e.target.value });
-	}
 
 	const submit = (e) => {
 		e.preventDefault();
-		user.adress = adress;
 		handleSubmit(user);
 	};
 
@@ -75,75 +70,10 @@ function UserForm({ handleSubmit, userData, btnText }) {
 			<Input
 				type="password"
 				text="Confirmação"
-				name="confPassword"
+				name="newPassword"
 				classis="col-lg-6"
 				handleOnChange={handleChange}
 				placeholder="Confirme a senha"
-			/>
-			<h3>Informe o seu endereço:</h3>
-			<Input
-				type="text"
-				text="CEP"
-				name="passcode"
-				value={adress.passcode ? maskCep(adress.passcode) : ""}
-				maxLength="9"
-				classis="col-lg-4"
-				handleOnChange={handleChangeAdress}
-				placeholder="Informe o CEP"
-			/>
-			<Input
-				type="text"
-				text="Endereço"
-				name="adressName"
-				value={adress.adressName}
-				classis="col-lg-10"
-				handleOnChange={handleChangeAdress}
-				placeholder="Informe o seu endereço"
-			/>
-			<Input
-				type="text"
-				text="Nº"
-				name="number"
-				value={adress.number}
-				classis="col-lg-2"
-				handleOnChange={handleChangeAdress}
-				placeholder="Número"
-			/>
-			<Input
-				type="text"
-				text="Complemento"
-				name="complement"
-				value={adress.complement}
-				handleOnChange={handleChangeAdress}
-				placeholder="Algum complemento?"
-			/>
-			<Input
-				type="text"
-				text="Bairro"
-				name="neighborhood"
-				value={adress.neighborhood}
-				classis="col-lg-5"
-				handleOnChange={handleChangeAdress}
-				placeholder="Informe o seu bairro"
-			/>
-			<Input
-				type="text"
-				text="Cidade"
-				name="city"
-				value={adress.city}
-				classis="col-lg-5"
-				handleOnChange={handleChangeAdress}
-				placeholder="Informe a sua cidade"
-			/>
-			<Input
-				type="text"
-				text="Estado"
-				name="state"
-				value={adress.state}
-				classis="col-lg-2"
-				maxLength="2"
-				handleOnChange={handleChangeAdress}
-				placeholder="UF"
 			/>
 			<Button text={btnText} type="submit" />
 		</form>

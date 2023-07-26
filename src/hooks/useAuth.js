@@ -1,8 +1,9 @@
 import api from "../utils/api";
 
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Faz o redirecionamento do usuário
+import { Form, useNavigate } from "react-router-dom"; // Faz o redirecionamento do usuário
 import useFlashMessage from "./useFlashMessages";
+import axios from "axios";
 
 export default function useAuth() {
 	const { setFlashMessage } = useFlashMessage();
@@ -33,7 +34,9 @@ export default function useAuth() {
 			const data = await api.post("users/register", user).then((response) => {
 				return response.data;
 			});
+
 			console.log(data);
+
 			// Chama a função local de autenticação do usuário
 			await authUser(data);
 		} catch (error) {

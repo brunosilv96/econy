@@ -16,7 +16,7 @@ function Register() {
 			<div className="row justify-content-center">
 				<div className="col-lg-8" id={styles.login_container}>
 					<h1 className="mb-3">Cadastre-se</h1>
-					<UserForm userData={{ adress: {} }} btnText={"Cadastrar"} handleSubmit={registerUser} />
+					<UserForm btnText={"Cadastrar"} handleSubmit={registerUser} />
 				</div>
 			</div>
 		</section>
